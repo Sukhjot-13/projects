@@ -1,0 +1,387 @@
+/* code for the index\home page */
+
+/* setting up the base font for all the text */
+.homePage,.formPage {
+    font-family: 'Victor Mono', monospace;
+    margin: 0;
+    padding: 0;
+    background-color: #ea6969;
+}
+
+/* setting up the heading color and style */
+h2{
+    color: #490606;
+    font-style: italic;
+    font-family: 'Lobster', cursive;
+    font-size: 2rem;
+}
+
+/* applying a background image and positioning it */
+.homePage{
+    background-image: url("../images/th-removebg-preview.png");    
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 46rem;
+    background-size: 48rem;
+    color: white;
+}
+
+/* setting the color of the header and footer*/
+.homePage>header,
+.homePage>footer  {
+    background-color: #de4326;
+}
+
+/* making the navbar flex and centering the items */
+.homePage>header>nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* setting the width and display to flex of the container in the nav */
+.homePage>header>nav>.navContainer {
+    width: 100%;
+    max-width: 1300px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+}
+
+/* setting the size of the logo */
+.homePage>header>nav img{
+    width: 5rem;
+}
+
+/* making its display flex to show them in one row */
+.homePage>header>nav .navLinks {
+    list-style: none;
+    display: flex;
+}
+  
+.homePage>header>nav .navLinks li {
+    margin-left: 20px;
+}
+
+/* formating the style of the links in navbar */
+.navLinks li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-style: italic;
+    font-family: 'Kaushan Script', cursive;
+}
+
+/* adding a slight change when hovered over a link */
+.navLinks li a:hover {
+    color: #edb4b4;
+}
+
+/* adding padding to the main section */
+.homePage> main {
+    padding: 40px 0;
+    text-align: center;
+}
+
+/* setting the display flex to make sure that every wsection is in a column and positioning the content to the center */
+.homePage>main>section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* this is to set the display to flex and make the items wrap when the screen size is too short or long for the content */
+.homePage>main>section>div{
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1.2;
+
+}
+
+/* this is to center the items in the containers */
+.homePage>main>section>.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* this is code used for making a card to shocase our pizza  */
+main>section>div>.container>div{
+    background-color: #d1a3a3;
+    border-radius: 2.5rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    opacity: .9;
+    margin: 2rem;
+    width: 300px;
+    transition: .2s ease-in-out;
+}
+
+/* this is to animate the card on hover */
+.homePage>main>section>div>.container>div:hover{
+    transform: translateX(6px) translateY(6px);
+}
+
+/* this is to set the size of the image of pizza in the card */
+.homePage>main>section>div>.container>div>img{
+    width: 300px;
+    height: 250px;
+} 
+  
+section h2 {
+    margin-bottom: 20px;
+}
+
+/* this code is for designing the order button */
+.orderButton{
+    margin: auto;
+    margin-bottom: 1rem;
+    text-align: center;
+    background-color: white;
+    width: 12rem;
+    border-radius: 1rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+}
+
+/* this is to add animation when hovered over the order button */
+.orderButton:hover{
+    animation: shake .8s;
+    animation-iteration-count: infinite;
+}
+
+/* this is the code for a basic shake effect */
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(7deg); }
+    50% { transform: rotate(-7deg); }
+    75% { transform: rotate(5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+
+.orderButton>a{
+    color: #676161;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.4rem;
+    font-style: italic;
+    
+}
+
+/* positioning all the text to center on home page */
+.homePage section+section p{
+    text-align: center;
+    background-color: #e26060;
+}
+
+/* this code is for adding color in the footer */
+.homePage>footer {
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-family: 'Kaushan Script', cursive;
+}
+  
+/* this code is for the order page */
+
+/* setting the background image and adding a animation to it */
+.formPage{
+    background-color: #d14747;
+    background-image: url("../images/pizza-outline.png") ;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: 5rem;
+    background-size:34rem ;
+    animation: pizzaMove 4s infinite alternate linear;
+}
+
+/* this is code to move the background image up and down */
+@keyframes pizzaMove {
+    0% {
+      background-position-y: 12rem;
+    }
+    100% {
+      background-position-y: 4rem;
+    }
+}
+  
+/* this is for the header of the form page */
+.formPage>.orderHeader{
+    background-color: #de4326;
+    height: 70px;
+    margin-top: 3rem;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color:rgb(204, 219, 232);
+    opacity: .9;
+    margin-top: 0px;
+    font-family: 'Lobster', cursive;
+}
+
+/* this is to make all the different input align in the vertical position */
+.formPage>main>form{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: rgb(246, 231, 231);
+    /* font-family: 'Oswald', sans-serif; */
+    /* font-family: 'Lobster', cursive; */
+}
+
+/* this is make the label and input to be shown side by side */
+.formPage>main>form>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 70rem;
+    margin-top: 1rem;
+}
+
+.formPage>main>form>div:nth-child(1)>input{
+    width:40%;
+}
+
+.formPage>main>form>div:nth-child(2)>input{
+    width:40%;
+}
+
+.formPage>main>form>div:nth-child(3)>input{
+    width:40%;
+}
+.formPage>main>form>div:nth-child(4)>input{
+    width:40%;
+}
+
+/* this is to give a different color to the input and text area fields insted to plain white color */
+.formPage>main>form>div>input,
+.formPage>main>form>div>textarea{
+    background-color: #f3b6b6;
+}
+
+/* this is to style the select tag */
+.formPage>main>form>div>select{
+    width: 7rem;
+    height: 1.5rem;
+    text-align: center;
+    background-color: #f3b6b6;
+    font-style: italic;
+    font-weight: 500;
+    border-radius: 1rem;
+}
+
+/* this to style the button in the form */
+.formPage>main>form>button{
+    margin-top: 3rem;
+    width: 15%;
+    height: 3rem;
+    font-size: 1.2rem;
+    border-radius: 1rem;
+    background-color: #c83a3a;
+    color: #fff;
+    min-width: 10rem;
+}
+
+/* this to change the color of the button when hovered */
+.formPage>main>form>button:hover{
+    background-color: #a23030;
+}
+
+
+.formPage>main>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formPage>main>div>div{
+    width: 100%;
+}
+
+
+.formPage>main>div>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f4eeee;
+
+}
+
+/* this is to add animation on the anchor tag */
+.formPage>main>div>div>a:hover{
+    /* scale: 1.2; */
+    animation: shrinkGrow 1s;
+    animation-iteration-count: infinite;
+}
+
+/* this is the code for the animation to make it shrink and grow */
+@keyframes shrinkGrow {
+    0%{transform: scale(1);}
+    25%{transform: scale(1.1);}
+    35%{transform: scale(1.2);}
+    50%{transform: scale(1.3);}
+    60%{transform: scale(1.2);}
+    75%{transform: scale(1.1);}
+    100%{transform: scale(1);}
+}
+
+/* this to style the anchor tag */
+.formPage>main>div>div>a{
+    text-decoration: none;
+    background-color: #713333;
+    margin-top: 10rem;
+    display: flex;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    width: 30%;
+}
+
+.formPage>main>div>div>a>span{
+    padding:.6rem;
+    font-size: 5rem;
+}
+
+.formPage>main>div>div>a>div{
+    font-size: 1.3rem;
+    padding-top:.6rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+/* setting up the footer */
+.formPage>footer{
+    background-color: #de4326;
+    margin-top: 4rem;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}

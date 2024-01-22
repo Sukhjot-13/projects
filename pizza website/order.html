@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
+    <meta name="robots" content="noindex, nofollow" >
+    <meta name="description" content="this is a order page for a pizza" >
+    <title>Order Page</title>
+    <!-- linking the css file -->
+    <link rel="stylesheet" href="./css/style.css" >
+    <!-- linking the js file -->
+    <script type="text/javascript" src="./js/script.js"></script>
+      <!-- Google Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Victor+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+  </head>
+  <body class="formPage">
+    <!-- this is the header of the order page -->
+    <header class="orderHeader">
+      <h1>Place Your Order</h1>
+ </header>
+    <!--this is the main section which will containt the form  -->
+    <main>
+      <!-- this is the form for our order page  -->
+      <form action="submitOrder.php" method="post">
+        <!-- this div contain input field for name  -->
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required >
+        </div>
+        <!-- this div contain input field for email -->
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required >
+        </div>
+        <!-- this div contain input field for phone -->
+        <div>
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required >
+        </div>
+        <!-- this div contain input field for adress -->
+        <div>
+          <label for="address">Address:</label>
+          <input type="text" id="address" name="address" required >
+        </div>
+        <!-- this div contain input field for city -->
+        <div>
+          <label for="city">City:</label>
+          <input type="text" id="city" name="city" required >
+        </div>
+        <!-- this div contain input field for zip code -->
+        <div>
+          <label for="zipCode">Zip Code:</label>
+          <input type="text" id="zipCode" name="zipCode" required >
+        </div>
+        <!-- this div contain input field for quantity -->
+        <div>
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" required >
+        </div>
+        <!-- this div will contain the radio input field  -->
+        <div>
+          <label>Special Offer:</label>
+          <input type="radio" id="offer1" name="specialOffer" value="offer1" >
+          <label for="offer1">buy 2 get 1 free</label>
+          <input type="radio" id="offer2" name="specialOffer" value="offer2" >
+          <label for="offer2">25% off on 1 pizza</label>
+        </div>
+        <!-- this will contain the input field for the coupon code field and validate that coupn code should be less than the 6 characters -->
+        <div>
+          <label for="couponCode">Coupon Code:</label>
+          <input type="text" id="couponCode" name="couponCode" pattern="[A-Za-z0-9]{6}" title="Coupon code must be 6 letters or numbers." >
+        </div>
+        <!-- this div will contain the radio input field for the size of the pizza -->
+        <div>
+          <label>Choose Size:</label>
+          <input type="radio" id="small" name="size" value="small" required >
+          <label for="small">Small</label>
+          <input type="radio" id="medium" name="size" value="medium" required >
+          <label for="medium">Medium</label>
+          <input type="radio" id="large" name="size" value="large" required >
+          <label for="large">Large</label>
+        </div>
+        <!-- this div will have checkbox input fields  -->
+        <div>
+          <label>Choose Toppings:</label>
+          <div>
+            <input type="checkbox" id="cheese" name="topping" value="cheese" >
+            <label for="cheese">Cheese</label>
+          </div>
+          <div>
+            <input type="checkbox" id="tomato" name="topping" value="tomato" >
+            <label for="tomato">Tomato</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="mushroom"
+              name="topping"
+              value="mushroom"
+            >
+            <label for="mushroom">Mushroom</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="blackOlives"
+              name="topping"
+              value="mushroom"
+            >
+            <label for="blackOlives">Black Olives</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="jalapeno"
+              name="topping"
+              value="mushroom"
+            >
+            <label for="jalapeno">Jalapeno</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="pepper"
+              name="topping"
+              value="mushroom"
+            >
+            <label for="pepper">Pepper</label>
+            <input
+              type="checkbox"
+              id="greenOlives"
+              name="topping"
+              value="mushroom"
+            >
+            <label for="greenOlives">Green Olives</label>
+          </div>
+        </div>
+        <!-- this will have a dropdown select box  -->
+        <div>
+          <label for="delivery">Delivery Method:</label>
+          <select id="delivery" name="delivery">
+            <option value="pickup">Pickup</option>
+            <option value="delivery">Delivery</option>
+          </select>
+        </div>
+        <!-- this will have a date input field  -->
+        <div>
+          <label for="schedule">Scheduled Pickup/Delivery:</label>
+          <input
+            type="datetime-local"
+            id="schedule"
+            name="schedule"
+            min="2023-07-30T00:00"
+            max="2023-12-31T23:59"
+          >
+        </div>
+        <!-- this will have a textarea field  -->
+        <div>
+          <label for="instructions">Special Instructions:</label>
+          <textarea
+            id="instructions"
+            name="instructions"
+            rows="3"
+            placeholder="Enter any special instructions or notes here..."
+          ></textarea>
+        </div>
+        <!-- this is the button to submit the form -->
+        <button type="submit">Submit Order</button>
+      </form>
+      <div>
+        <div>
+          <a href="index.html">
+            <span>&larr;</span>
+            Back to Home
+          </a>
+        </div>
+      </div>
+    </main>
+    <!-- this is the footer of the order page -->
+    <footer>
+      <p>For any queries,contact us at: contact@gmail.com</p>
+    </footer>
+  </body>
+</html>
